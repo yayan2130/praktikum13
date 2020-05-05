@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Apr 2020 pada 06.48
+-- Waktu pembuatan: 05 Bulan Mei 2020 pada 16.50
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -31,24 +31,29 @@ SET time_zone = "+00:00";
 CREATE TABLE `data_covid` (
   `id_covid` int(11) NOT NULL,
   `id_negara` int(11) NOT NULL,
-  `jumlah` int(11) NOT NULL
+  `jumlah` int(11) NOT NULL,
+  `newcase` int(11) NOT NULL,
+  `totaldeath` int(11) NOT NULL,
+  `newdeath` int(11) NOT NULL,
+  `recovered` int(11) NOT NULL,
+  `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `data_covid`
 --
 
-INSERT INTO `data_covid` (`id_covid`, `id_negara`, `jumlah`) VALUES
-(1, 1, 1029878),
-(2, 2, 232128),
-(3, 3, 201505),
-(4, 4, 165911),
-(5, 5, 161145),
-(6, 6, 159431),
-(7, 7, 114653),
-(8, 8, 93558),
-(9, 9, 92584),
-(10, 10, 82836);
+INSERT INTO `data_covid` (`id_covid`, `id_negara`, `jumlah`, `newcase`, `totaldeath`, `newdeath`, `recovered`, `active`) VALUES
+(1, 1, 1029878, 19522, 58640, 1843, 140138, 831100),
+(2, 2, 232128, 2706, 23822, 301, 123903, 84403),
+(3, 3, 201505, 2091, 27359, 382, 68941, 105205),
+(4, 4, 165911, 2638, 23660, 367, 46886, 95365),
+(5, 5, 161145, 3996, 21678, 586, 0, 139123),
+(6, 6, 159431, 673, 6215, 89, 117400, 35816),
+(7, 7, 114653, 2392, 2992, 92, 38809, 72852),
+(8, 8, 93558, 6411, 867, 73, 8456, 84235),
+(9, 9, 92584, 1112, 5877, 71, 72439, 14268),
+(10, 10, 82836, 6, 4633, 0, 77555, 648);
 
 -- --------------------------------------------------------
 
